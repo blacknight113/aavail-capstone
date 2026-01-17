@@ -34,3 +34,20 @@ Novelty detection techniques were considered to monitor performance drift.
 1. Build the Docker image
 2. Run the container
 3. Send a prediction request to the Flask endpoint
+
+## Project Overview
+This project addresses a business need for forecasting future revenue using historical transaction data.
+The problem is formulated as a time-series regression task.
+
+## Modeling Approach
+Historical revenue data were aggregated by day and used to train a regression-based forecasting model.
+Seasonality and recent trends were considered during feature engineering.
+
+## Deployment
+The trained model is designed to be deployed using a Flask API.
+The API accepts a target date and country as input and returns a revenue prediction.
+Docker can be used to containerize the application for reproducibility.
+
+## Monitoring and Testing
+Basic unit tests can be used to validate inputs and model behavior.
+Logging of predictions, timestamps, and model versions supports performance monitoring and drift detection.
